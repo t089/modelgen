@@ -20,14 +20,14 @@ import FoundationEssentials
 import Foundation
 #endif
 
-let TypePrefixes = Set([
-	"apiserver",
-	"io.k8s.api.",
-	"io.k8s.api.apiserver",
+let TypePrefixes = [
 	"io.k8s.apiextensions-apiserver.pkg.apis.",
 	"io.k8s.apimachinery.pkg.apis.",
 	"io.k8s.kube-aggregator.pkg.apis.",
-])
+	"io.k8s.api.apiserver",
+	"io.k8s.api.",
+	"apiserver",
+]
 
 let ManualTypes = Set([
 	"io.k8s.apimachinery.pkg.api.resource.Quantity",
