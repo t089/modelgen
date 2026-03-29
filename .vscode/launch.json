@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:modelgen}",
+            "name": "Debug skgen",
+            "target": "skgen",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug skgen"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:modelgen}",
+            "name": "Release skgen",
+            "target": "skgen",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release skgen"
+        }
+    ]
+}

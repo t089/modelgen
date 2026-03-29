@@ -14,7 +14,11 @@
 // limitations under the License.
 //
 
+#if canImport(FoundationEssentials)
+import FoundationEssentials
+#else
 import Foundation
+#endif
 
 let TypePrefixes = Set([
 	"apiserver",
@@ -100,6 +104,7 @@ let PluralNames = [
 	"PersistentVolume":                 "persistentvolumes",
 	"PersistentVolumeClaim":            "persistentvolumeclaims",
 	"Pod":                              "pods",
+	"PodCertificateRequest":            "podcertificaterequests",
 	"PodDisruptionBudget":              "poddisruptionbudgets",
 	"PodMetrics":                       "pods",
 	"PodPreset":                        "podpresets",
@@ -139,6 +144,7 @@ let PluralNames = [
 	"ValidatingWebhookConfiguration":   "validatingwebhookconfigurations",
 	"VolumeAttachment":                 "volumeattachments",
 	"VolumeAttributesClass":            "volumeattributesclasses",
+	"Workload":                         "workloads",
 ]
 
 let ShortNames = [

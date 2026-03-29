@@ -49,7 +49,8 @@ class JSONSchemaProcessor {
 
 		let openAPIURL = "https://raw.githubusercontent.com/kubernetes/kubernetes/\(apiVersion)/api/openapi-spec/swagger.json"
 
-		_ = try shellOut(to: "/usr/local/bin/openapi2jsonschema", arguments: [
+		let openapi2jsonschema = ProcessInfo.processInfo.environment["OPENAPI2JSONSCHEMA_PATH"] ?? "openapi2jsonschema"
+		_ = try shellOut(to: openapi2jsonschema, arguments: [
 			"--expanded", "--kubernetes",
 			"--prefix", "https://swiftkube.dev/schema/\(apiVersion)/_definitions.json",
 			"-o", jsonSchemaPath.absolute().string,

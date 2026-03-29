@@ -20,7 +20,11 @@
 /// {{ type.group }}.{{ type.version }}.{{ type.kind }}
 ///
 
+#if canImport(FoundationEssentials)
+import FoundationEssentials
+#else
 import Foundation
+#endif
 
 // MARK: - {{ type.group|P.escapeKeywords }}.{{ type.version }}.{{ type.kind }}
 

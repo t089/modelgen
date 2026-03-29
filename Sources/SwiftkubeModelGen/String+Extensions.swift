@@ -16,10 +16,6 @@
 
 import Foundation
 
-#if os(Linux)
-	typealias NSRegularExpression = RegularExpression
-#endif
-
 extension String {
 
 	func sanitizedRef() -> String {
